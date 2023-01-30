@@ -22,13 +22,10 @@
     
     <div class="container">
         <script>
-/* */
-            document.write('<p class="date">20xx/01/23</p>');   // 後で実際の日付に変える
-            document.write(20+3*3*4+43);   // 計算
-            document.write('<p></p>');   // 後で実際の日付に変える
-            document.write('10+3の結果は、13です');   // 計算
-            document.write('<p></p>');   // 後で実際の日付に変える
-            document.write('10+3の結果は' + ( 10 + 3 ) + 'です');   // 計算
+            var today = new Date();
+            var todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+            var newYear = new Date(2017, 1, 1);
+            document.write('<p class="date">' + todayHtml + '</p>');
         </script>
     </div>
 </body>
